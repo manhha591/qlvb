@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import btqlvb.main.Main;
 
 
 /**
@@ -17,17 +18,20 @@ import javax.swing.table.DefaultTableModel;
  * @author Manh Ha
  */
 public class QLVBJPanel extends javax.swing.JPanel {
-    public List<VB> listVB;
+   
     public DefaultTableModel tableModel;
-    private int index;
+    public int index;
     /**
      * Creates new form QLVBJPanel
      */
     public QLVBJPanel() {
         initComponents();
-        listVB = new ArrayList<>();
+        
         tableModel = (DefaultTableModel) tblVB.getModel();
         index =1;
+        for (VB vb : Main.listVB) {
+            showtbl(vb);
+        }
         
     }
 
@@ -86,19 +90,24 @@ public class QLVBJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jlbSHVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(0, 153, 102));
+
+        jlbSHVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jlbSHVB.setForeground(new java.awt.Color(255, 255, 255));
         jlbSHVB.setText("Số Hiệu Văn Bản");
         jlbSHVB.setVerifyInputWhenFocusTarget(false);
 
-        jlbTenVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jlbTenVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jlbTenVB.setForeground(new java.awt.Color(255, 255, 255));
         jlbTenVB.setText("Tên Văn Bản");
         jlbTenVB.setVerifyInputWhenFocusTarget(false);
 
-        jlbLoaiVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jlbLoaiVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jlbLoaiVB.setForeground(new java.awt.Color(255, 255, 255));
         jlbLoaiVB.setText("Loại Văn Bản");
         jlbLoaiVB.setVerifyInputWhenFocusTarget(false);
 
-        txtSHVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtSHVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtSHVB.setText("128QDCP");
         txtSHVB.setAutoscrolls(false);
         txtSHVB.setVerifyInputWhenFocusTarget(false);
@@ -108,29 +117,32 @@ public class QLVBJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtTenVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtTenVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtTenVB.setText("Hướng dẫn ....");
         txtTenVB.setAutoscrolls(false);
         txtTenVB.setVerifyInputWhenFocusTarget(false);
 
-        txtLoaiVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtLoaiVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtLoaiVB.setText("Chỉ thị");
         txtLoaiVB.setAutoscrolls(false);
         txtLoaiVB.setVerifyInputWhenFocusTarget(false);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ngày Gửi/Nhận");
         jLabel4.setVerifyInputWhenFocusTarget(false);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Cơ Quan Gửi/ Nhận");
         jLabel5.setVerifyInputWhenFocusTarget(false);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Kiểu văn bản");
         jLabel6.setVerifyInputWhenFocusTarget(false);
 
-        cbbKieuVB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cbbKieuVB.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cbbKieuVB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Văn bản đi", "Văn bản đến", " " }));
         cbbKieuVB.setVerifyInputWhenFocusTarget(false);
         cbbKieuVB.addActionListener(new java.awt.event.ActionListener() {
@@ -139,12 +151,12 @@ public class QLVBJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtNgayGuiNhan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNgayGuiNhan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtNgayGuiNhan.setText("24/06/2022");
         txtNgayGuiNhan.setAutoscrolls(false);
         txtNgayGuiNhan.setVerifyInputWhenFocusTarget(false);
 
-        txtCoQuan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtCoQuan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtCoQuan.setText("BAN CO YEU CP");
         txtCoQuan.setAutoscrolls(false);
         txtCoQuan.setVerifyInputWhenFocusTarget(false);
@@ -154,25 +166,28 @@ public class QLVBJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Ngày ký");
         jLabel7.setVerifyInputWhenFocusTarget(false);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Người ký");
         jLabel8.setVerifyInputWhenFocusTarget(false);
 
-        txtNgayKy.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNgayKy.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtNgayKy.setText("23/06/2022");
         txtNgayKy.setAutoscrolls(false);
         txtNgayKy.setVerifyInputWhenFocusTarget(false);
 
-        txtNguoiKy.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNguoiKy.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtNguoiKy.setText("abc");
         txtNguoiKy.setAutoscrolls(false);
         txtNguoiKy.setVerifyInputWhenFocusTarget(false);
 
-        btnThem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnThem.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnThem.setForeground(new java.awt.Color(0, 153, 102));
         btnThem.setText("Thêm mới");
         btnThem.setVerifyInputWhenFocusTarget(false);
         btnThem.addActionListener(new java.awt.event.ActionListener() {
@@ -188,33 +203,33 @@ public class QLVBJPanel extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlbSHVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlbSHVB, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlbTenVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jlbLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(txtSHVB, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(txtTenVB, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                    .addComponent(txtLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(txtSHVB, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(txtTenVB, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbbKieuVB, 0, 128, Short.MAX_VALUE)
-                    .addComponent(txtNgayGuiNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(txtCoQuan, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                    .addComponent(cbbKieuVB, 0, 129, Short.MAX_VALUE)
+                    .addComponent(txtNgayGuiNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(txtCoQuan, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
                 .addGap(63, 63, 63)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnThem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(btnThem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtNgayKy, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                    .addComponent(txtNguoiKy, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                    .addComponent(txtNgayKy, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(txtNguoiKy, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
                 .addGap(52, 52, 52))
         );
         jPanel2Layout.setVerticalGroup(
@@ -223,34 +238,28 @@ public class QLVBJPanel extends javax.swing.JPanel {
                 .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jlbSHVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtSHVB, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                        .addComponent(jlbSHVB, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSHVB, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtNgayGuiNhan)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtNgayKy))
-                .addGap(19, 19, 19)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlbTenVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtNguoiKy, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTenVB)
-                            .addComponent(txtCoQuan))
-                        .addGap(18, 18, 18)))
-                .addGap(48, 48, 48)
+                    .addComponent(txtNguoiKy, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(txtTenVB)
+                    .addComponent(txtCoQuan)
+                    .addComponent(jlbTenVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtLoaiVB)
                     .addComponent(jlbLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cbbKieuVB)
-                    .addComponent(btnThem, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(24, 24, 24))
+                    .addComponent(btnThem, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(txtLoaiVB, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(35, 35, 35))
         );
 
         txtNoiDung.setColumns(20);
@@ -348,7 +357,7 @@ public class QLVBJPanel extends javax.swing.JPanel {
             var kieuVB = cbbKieuVB.getSelectedItem().toString();
             var noidung = txtNoiDung.getText();
             VB vb = new VB(soVB , tenVB, loaiVB, coquan, ngayGN, ngayKy, nguoiKy, kieuVB, noidung);
-            listVB.add(vb);
+            Main.listVB.add(vb);
             JOptionPane.showMessageDialog(txtCoQuan, "Da them thanh cong");
             showtbl(vb);
 
@@ -367,7 +376,7 @@ public class QLVBJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSHVBActionPerformed
     
-       private void showtbl(VB vb) {
+       public void showtbl(VB vb) {
         var row = new Object[]{
             index++, vb.getSoVB(),vb.getTenVB(),vb.getLoaiVB(),vb.getCoquan(),vb.getNgayGuiNhan(),
             vb.getNgayKy(),vb.getNguoiKy(),vb.getKieuvb(),vb.getNoiDung()

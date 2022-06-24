@@ -91,6 +91,11 @@
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="99" red="0" type="rgb"/>
+            </Property>
+          </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -98,38 +103,38 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jlbSHVB" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jlbSHVB" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                           <Component id="jlbTenVB" max="32767" attributes="0"/>
                           <Component id="jlbLoaiVB" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtLoaiVB" pref="128" max="32767" attributes="0"/>
-                          <Component id="txtSHVB" pref="128" max="32767" attributes="0"/>
-                          <Component id="txtTenVB" pref="128" max="32767" attributes="0"/>
+                          <Component id="txtLoaiVB" pref="129" max="32767" attributes="0"/>
+                          <Component id="txtSHVB" pref="129" max="32767" attributes="0"/>
+                          <Component id="txtTenVB" pref="129" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel4" alignment="0" pref="128" max="32767" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" pref="128" max="32767" attributes="0"/>
-                          <Component id="jLabel6" pref="128" max="32767" attributes="0"/>
+                          <Component id="jLabel4" alignment="0" pref="129" max="32767" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" pref="129" max="32767" attributes="0"/>
+                          <Component id="jLabel6" pref="129" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbbKieuVB" pref="128" max="32767" attributes="0"/>
-                          <Component id="txtNgayGuiNhan" pref="128" max="32767" attributes="0"/>
-                          <Component id="txtCoQuan" pref="128" max="32767" attributes="0"/>
+                          <Component id="cbbKieuVB" pref="129" max="32767" attributes="0"/>
+                          <Component id="txtNgayGuiNhan" pref="129" max="32767" attributes="0"/>
+                          <Component id="txtCoQuan" pref="129" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel8" alignment="1" max="32767" attributes="0"/>
-                          <Component id="btnThem" alignment="1" pref="102" max="32767" attributes="0"/>
+                          <Component id="btnThem" alignment="1" pref="103" max="32767" attributes="0"/>
                           <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtNgayKy" pref="128" max="32767" attributes="0"/>
-                          <Component id="txtNguoiKy" pref="128" max="32767" attributes="0"/>
+                          <Component id="txtNgayKy" pref="129" max="32767" attributes="0"/>
+                          <Component id="txtNguoiKy" pref="129" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
@@ -141,42 +146,32 @@
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="jlbSHVB" alignment="3" max="32767" attributes="0"/>
-                              <Component id="txtSHVB" alignment="3" pref="35" max="32767" attributes="0"/>
+                              <Component id="jlbSHVB" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="txtSHVB" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtNgayGuiNhan" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel7" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtNgayKy" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jlbTenVB" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtNguoiKy" alignment="0" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtTenVB" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtCoQuan" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="txtNguoiKy" alignment="0" pref="35" max="32767" attributes="0"/>
+                          <Component id="txtTenVB" max="32767" attributes="0"/>
+                          <Component id="txtCoQuan" max="32767" attributes="0"/>
+                          <Component id="jlbTenVB" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel5" max="32767" attributes="0"/>
+                          <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtLoaiVB" alignment="0" max="32767" attributes="0"/>
                           <Component id="jlbLoaiVB" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                           <Component id="cbbKieuVB" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnThem" alignment="0" pref="35" max="32767" attributes="0"/>
+                          <Component id="txtLoaiVB" alignment="1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -185,7 +180,10 @@
             <Component class="javax.swing.JLabel" name="jlbSHVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="S&#x1ed1; Hi&#x1ec7;u V&#x103;n B&#x1ea3;n"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -194,7 +192,10 @@
             <Component class="javax.swing.JLabel" name="jlbTenVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="T&#xea;n V&#x103;n B&#x1ea3;n"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -203,7 +204,10 @@
             <Component class="javax.swing.JLabel" name="jlbLoaiVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i V&#x103;n B&#x1ea3;n"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -212,7 +216,7 @@
             <Component class="javax.swing.JTextField" name="txtSHVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="128QDCP"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -225,7 +229,7 @@
             <Component class="javax.swing.JTextField" name="txtTenVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="H&#x1b0;&#x1edb;ng d&#x1eab;n ...."/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -235,7 +239,7 @@
             <Component class="javax.swing.JTextField" name="txtLoaiVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ch&#x1ec9; th&#x1ecb;"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -245,7 +249,10 @@
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ng&#xe0;y G&#x1eed;i/Nh&#x1ead;n"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -254,7 +261,10 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="C&#x1a1; Quan G&#x1eed;i/ Nh&#x1ead;n"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -263,7 +273,10 @@
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ki&#x1ec3;u v&#x103;n b&#x1ea3;n"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -272,7 +285,7 @@
             <Component class="javax.swing.JComboBox" name="cbbKieuVB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
@@ -293,7 +306,7 @@
             <Component class="javax.swing.JTextField" name="txtNgayGuiNhan">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="24/06/2022"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -303,7 +316,7 @@
             <Component class="javax.swing.JTextField" name="txtCoQuan">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="BAN CO YEU CP"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -316,7 +329,10 @@
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ng&#xe0;y k&#xfd;"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -325,7 +341,10 @@
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i k&#xfd;"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -334,7 +353,7 @@
             <Component class="javax.swing.JTextField" name="txtNgayKy">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="23/06/2022"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -344,7 +363,7 @@
             <Component class="javax.swing.JTextField" name="txtNguoiKy">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="abc"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
@@ -354,7 +373,10 @@
             <Component class="javax.swing.JButton" name="btnThem">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="0"/>
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="66" green="99" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Th&#xea;m m&#x1edb;i"/>
                 <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
