@@ -6,12 +6,14 @@
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/model/VB.java</file>
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/main/Main.java</file>
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/TrangChuJPanel.java</file>
+            <file>file:/E:/junior/java/BTQLVB/src/btqlvb/model/Account.java</file>
+            <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/RegisterFrm.java</file>
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/controller/ChuyenManHinhController.java</file>
-            <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/TimKiemJPanel.java</file>
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/QLVBJPanel.java</file>
+            <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/TimKiemJPanel.java</file>
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/bean/DanhMucBean.java</file>
             <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/MainJFrame.java</file>
-            <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/ThongKeJPanel.java</file>
+            <file>file:/E:/junior/java/BTQLVB/src/btqlvb/view/LoginFrm.java</file>
         </group>
     </open-files>
 </project-private>

@@ -66,6 +66,7 @@ public class QLVBJPanel extends javax.swing.JPanel {
         txtNgayKy = new javax.swing.JTextField();
         txtNguoiKy = new javax.swing.JTextField();
         btnThem = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtNoiDung = new javax.swing.JTextArea();
@@ -196,6 +197,16 @@ public class QLVBJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 153, 102));
+        jButton2.setText("Chọn File");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -218,9 +229,9 @@ public class QLVBJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbbKieuVB, 0, 129, Short.MAX_VALUE)
-                    .addComponent(txtNgayGuiNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                    .addComponent(txtCoQuan, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                    .addComponent(cbbKieuVB, 0, 127, Short.MAX_VALUE)
+                    .addComponent(txtNgayGuiNhan, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                    .addComponent(txtCoQuan, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
                 .addGap(63, 63, 63)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -228,8 +239,9 @@ public class QLVBJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtNgayKy, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                    .addComponent(txtNguoiKy, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                    .addComponent(txtNgayKy, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                    .addComponent(txtNguoiKy, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(52, 52, 52))
         );
         jPanel2Layout.setVerticalGroup(
@@ -257,7 +269,9 @@ public class QLVBJPanel extends javax.swing.JPanel {
                     .addComponent(jlbLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cbbKieuVB)
-                    .addComponent(btnThem, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnThem, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtLoaiVB, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(35, 35, 35))
         );
@@ -288,7 +302,7 @@ public class QLVBJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "STT", "SỐ HIỆU VĂN BẢN", "TÊN VĂN BẢN", "LOẠI VĂN BẢN", "CƠ QUAN GỬI /NHÂN", "NGÀY GỬI/NHẬN", "NGÀY KÝ", "NGƯỜI KÝ", "KIỂU VĂN BẢN", "NỘI DUNG "
+                "STT", "SỐ HIỆU VĂN BẢN", "TÊN VĂN BẢN", "LOẠI VĂN BẢN", "CƠ QUAN GỬI /NHÂN", "NGÀY GỬI/NHẬN", "NGÀY KÝ", "NGƯỜI KÝ", "KIỂU VĂN BẢN", "NỘI DUNG ", "TỆP ĐÍNH KÈM"
             }
         ));
         jScrollPane2.setViewportView(tblVB);
@@ -375,6 +389,10 @@ public class QLVBJPanel extends javax.swing.JPanel {
     private void txtSHVBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSHVBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSHVBActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
     
        public void showtbl(VB vb) {
         var row = new Object[]{
@@ -388,6 +406,7 @@ public class QLVBJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnThem;
     private javax.swing.JComboBox<String> cbbKieuVB;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

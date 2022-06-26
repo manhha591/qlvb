@@ -4,6 +4,7 @@
  */
 package btqlvb.main;
 import btqlvb.model.VB;
+import btqlvb.view.LoginFrm;
 import btqlvb.view.MainJFrame;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,6 @@ import java.util.List;
 public class Main {
      public static List<VB> listVB =new ArrayList<>();;
     public static void main(String[] args) {
-        new MainJFrame().setVisible(true);
+        new LoginFrm().setVisible(true);
     }
 }

@@ -5,6 +5,11 @@
 package btqlvb.view;
 import btqlvb.main.Main;
 import btqlvb.model.VB;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -50,13 +55,15 @@ public class TimKiemJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         txtSoVB = new javax.swing.JTextField();
         cbbKieuVb = new javax.swing.JComboBox<>();
+        btnIn = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         tblView.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "STT", "SỐ HIỆU VĂN BẢN", "TÊN VĂN BẢN", "LOẠI VĂN BẢN", "NGÀY NHẬN", "CƠ QUAN ", "NGÀY NHẬN/GỬI", "NGÀY KÝ", "NGƯỜI KÝ", "KIỂU VĂN BẢN", "NỘI DUNG"
+                "SỐ HIỆU VĂN BẢN", "TÊN VĂN BẢN", "LOẠI VĂN BẢN", "CƠ QUAN ", "NGÀY NHẬN/GỬI", "NGÀY KÝ", "NGƯỜI KÝ", "KIỂU VĂN BẢN", "NỘI DUNG", "TỆP ĐÍNH KÈM"
             }
         ));
         jScrollPane2.setViewportView(tblView);
@@ -156,7 +163,7 @@ public class TimKiemJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbbKieuVb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Văn bản đi", "Văn bản đến", " " }));
+        cbbKieuVb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TẤT CẢ", "Văn bản đi", "Văn bản đến", " " }));
         cbbKieuVb.setMaximumSize(null);
         cbbKieuVb.setMinimumSize(null);
         cbbKieuVb.addActionListener(new java.awt.event.ActionListener() {
@@ -165,48 +172,77 @@ public class TimKiemJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnIn.setBackground(new java.awt.Color(0, 153, 51));
+        btnIn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnIn.setForeground(new java.awt.Color(255, 255, 255));
+        btnIn.setText("XUẤT FILE");
+        btnIn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnIn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(0, 153, 51));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("HIỂN THỊ TẤT CẢ");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(362, 362, 362)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(454, 454, 454))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cbbKieuVb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtTenVB, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtCoQuan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtSoVB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtNgayNG, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(119, 119, 119))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 887, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtLoaiVB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cbbKieuVb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtTenVB, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtCoQuan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtSoVB, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtNgayNG, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnIn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(382, 382, 382)
+                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(352, 352, 352))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTenVB, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,9 +265,13 @@ public class TimKiemJPanel extends javax.swing.JPanel {
                             .addComponent(cbbKieuVb, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtNgayNG, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
-                        .addGap(13, 13, 13)))
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(16, 16, 16))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnIn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)))
+                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -250,7 +290,7 @@ public class TimKiemJPanel extends javax.swing.JPanel {
                 .addGap(4, 4, 4)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -277,20 +317,42 @@ public class TimKiemJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtSoVBActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            var soVB = txtSoVB.getText();
-            var tenVB = txtTenVB.getText();
-            var loaiVB = txtLoaiVB.getText();
-            var coquan = txtCoQuan.getText();
-            var ngayGN = txtNgayNG.getText();
-            var kieuVB = cbbKieuVb.getSelectedItem().toString();
-            for (VB  vb : Main.listVB) {
-               if(vb.getSoVB() == soVB || vb.getTenVB() == tenVB || vb.getLoaiVB() == loaiVB
-                       || vb.getCoquan() == coquan|| vb.getNgayGuiNhan() == ngayGN
-                       || vb.getKieuvb() == kieuVB){
+            tableModel.getDataVector().removeAllElements();
+            revalidate();
+            var soVB = txtSoVB.getText().toString().trim();
+            var tenVB = txtTenVB.getText().toString().trim();
+            var loaiVB = txtLoaiVB.getText().toString().trim();
+            var coquan = txtCoQuan.getText().toString().trim();
+            var ngayGN = txtNgayNG.getText().toString().trim();
+            var kieuVB = cbbKieuVb.getSelectedItem().toString().trim();
+            if(kieuVB.equalsIgnoreCase("TẤT CẢ")){
+              for (VB  vb : Main.listVB) {
+                if(vb.getSoVB().equalsIgnoreCase(soVB) || vb.getTenVB().equalsIgnoreCase(tenVB)
+                       || vb.getLoaiVB().equalsIgnoreCase(loaiVB)
+                       || vb.getCoquan().equalsIgnoreCase(coquan)
+                       || vb.getNgayGuiNhan().equalsIgnoreCase(ngayGN)){
+                   showtbl(vb);
+               }
+            
+                }
+            }
+            else{
+               for (VB  vb : Main.listVB) {
+               if(vb.getSoVB().equalsIgnoreCase(soVB) || vb.getTenVB().equalsIgnoreCase(tenVB)
+                       || vb.getLoaiVB().equalsIgnoreCase(loaiVB)
+                       || vb.getCoquan().equalsIgnoreCase(coquan)
+                       || vb.getNgayGuiNhan().equalsIgnoreCase(ngayGN)
+                       || vb.getKieuvb()== kieuVB){
+                                     System.out.println(vb.getCoquan());
+                                     System.out.println(coquan);
+
                    showtbl(vb);
                }
             
         }
+            }
+            
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cbbKieuVbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbKieuVbActionPerformed
@@ -300,18 +362,57 @@ public class TimKiemJPanel extends javax.swing.JPanel {
     private void txtLoaiVBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoaiVBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLoaiVBActionPerformed
+
+    private void btnInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInActionPerformed
+                  // TODO add your handling code here:
+JFileChooser chooser = new JFileChooser();
+ int i = chooser.showSaveDialog(chooser);
+ if (i == JFileChooser.APPROVE_OPTION) {
+  File file = chooser.getSelectedFile();
+  try {
+   FileWriter out = new FileWriter(file + ".xls");
+   BufferedWriter bwrite = new BufferedWriter(out);
+   DefaultTableModel model = (DefaultTableModel) tblView.getModel();
+   // ten Cot
+   for (int j = 0; j < tblView.getColumnCount(); j++) {
+    bwrite.write(model.getColumnName(j) + "\t");
+   }
+   bwrite.write("\n");
+   // Lay du lieu dong
+   for (int j = 0; j < tblView.getRowCount(); j++) {
+    for (int k = 0; k < tblView.getColumnCount(); k++) {
+     bwrite.write(model.getValueAt(j, k) + "\t");
+    }
+    bwrite.write("\n");
+   }
+   bwrite.close();
+    JOptionPane.showMessageDialog(null, "Lưu file thành công!");
+  } catch (Exception e2) {
+    JOptionPane.showMessageDialog(null, "Lỗi khi lưu file!");
+  }
+ }
+    }//GEN-LAST:event_btnInActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+            for (VB vb : Main.listVB) {
+            showtbl(vb);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 public void showtbl(VB vb) {
         var row = new Object[]{
-            index++, vb.getSoVB(),vb.getTenVB(),vb.getLoaiVB(),vb.getCoquan(),vb.getNgayGuiNhan(),
+            vb.getSoVB(),vb.getTenVB(),vb.getLoaiVB(),vb.getCoquan(),vb.getNgayGuiNhan(),
             vb.getNgayKy(),vb.getNguoiKy(),vb.getKieuvb(),vb.getNoiDung()
         };
         tableModel.addRow(row);
         tableModel.fireTableDataChanged();
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIn;
     private javax.swing.JComboBox<String> cbbKieuVb;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

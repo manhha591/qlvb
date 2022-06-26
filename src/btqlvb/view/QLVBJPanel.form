@@ -121,9 +121,9 @@
                       </Group>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cbbKieuVB" pref="129" max="32767" attributes="0"/>
-                          <Component id="txtNgayGuiNhan" pref="129" max="32767" attributes="0"/>
-                          <Component id="txtCoQuan" pref="129" max="32767" attributes="0"/>
+                          <Component id="cbbKieuVB" pref="127" max="32767" attributes="0"/>
+                          <Component id="txtNgayGuiNhan" pref="127" max="32767" attributes="0"/>
+                          <Component id="txtCoQuan" pref="127" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -133,8 +133,9 @@
                       </Group>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtNgayKy" pref="129" max="32767" attributes="0"/>
-                          <Component id="txtNguoiKy" pref="129" max="32767" attributes="0"/>
+                          <Component id="txtNgayKy" pref="131" max="32767" attributes="0"/>
+                          <Component id="txtNguoiKy" pref="131" max="32767" attributes="0"/>
+                          <Component id="jButton2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
@@ -168,7 +169,10 @@
                           <Component id="jlbLoaiVB" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                           <Component id="cbbKieuVB" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btnThem" alignment="0" pref="35" max="32767" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="btnThem" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="jButton2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="txtLoaiVB" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -385,6 +389,23 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThemActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="66" green="99" red="0" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Ch&#x1ecd;n File"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
@@ -456,7 +477,7 @@
                 <Component class="javax.swing.JTable" name="tblVB">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="10" rowCount="0">
+                      <Table columnCount="11" rowCount="0">
                         <Column editable="true" title="STT" type="java.lang.Object"/>
                         <Column editable="true" title="S&#x1ed0; HI&#x1ec6;U V&#x102;N B&#x1ea2;N" type="java.lang.Object"/>
                         <Column editable="true" title="T&#xca;N V&#x102;N B&#x1ea2;N" type="java.lang.Object"/>
@@ -467,10 +488,16 @@
                         <Column editable="true" title="NG&#x1af;&#x1edc;I K&#xdd;" type="java.lang.Object"/>
                         <Column editable="true" title="KI&#x1ec2;U V&#x102;N B&#x1ea2;N" type="java.lang.Object"/>
                         <Column editable="true" title="N&#x1ed8;I DUNG " type="java.lang.Object"/>
+                        <Column editable="true" title="T&#x1ec6;P &#x110;&#xcd;NH K&#xc8;M" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>

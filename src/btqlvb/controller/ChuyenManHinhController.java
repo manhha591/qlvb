@@ -6,7 +6,6 @@ package btqlvb.controller;
 
 import btqlvb.bean.DanhMucBean;
 import btqlvb.view.QLVBJPanel;
-import btqlvb.view.ThongKeJPanel;
 import btqlvb.view.TimKiemJPanel;
 import btqlvb.view.TrangChuJPanel;
 import java.awt.BorderLayout;
@@ -74,9 +73,7 @@ public class ChuyenManHinhController {
                 case "TimKiem":
                     Node = new TimKiemJPanel();
                     break;
-                case "ThongKe":
-                    Node = new ThongKeJPanel();
-                    break;
+               
                 default:
                     Node = new TrangChuJPanel();
                     break;
